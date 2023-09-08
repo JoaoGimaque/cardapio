@@ -1,0 +1,96 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<div class="container">
+
+  <header>
+    <nav id="navbar">
+      <div class="logo"><span>Restaurante boa pedida</span></div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Cardapio</a></li>
+        <li><a href="#about">Sobre nos</a></li>
+        <li><a href="#order">Pedir</a></li>
+      </ul>
+    </nav>
+    <div id="mobile">
+      <div class="logo1"><span>Restaurante boa pedida</span></div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Cardapio</a></li>
+        <li><a href="#about">Sobre nos</a></li>
+        <li><a href="#order">Pedir</a></li>
+      </ul>
+    </div>
+
+    <div class="overlay">
+      <section id="home">
+        <h1 class="h-primary">Seja bem vindo a Restaurante boa pedida</h1>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis dolorum numquam minus. </p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+        <button class="btn">Pedir Agora</button>
+      </section>
+    </div>
+  </header>
+
+
+
+  <div id="menu">
+
+    <div class="heading">
+      <h1>Cardapio</h1>
+      <h3>Pratos</h3>
+    </div>
+
+    <div class="card" *ngFor="let item of pratos">
+      <img [src]="item.imagem">
+      <div class="details">
+        <div class="details-sub">
+          <h5>{{item.nome}}</h5>
+          <h5 class="price">{{item.preco}}</h5>
+        </div>
+        <p>{{item.descricao}}</p>
+        <button>Adicionar ao carrinho</button>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div id="about">
+    <h1 class="title">Sobre nos</h1>
+    <div class="about_row">
+      <div class="about_column">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam voluptate aperiam id saepe
+          natus tempore adipisci neque incidunt vel nam, distinctio, eos labore cupiditate assumenda
+          doloremque. Assumenda illo delectus aliquid libero, quisquam vero facere molestias neque
+          similique, aperiam dolores ex mollitia nobis nostrum blanditiis autem qui itaque quos, nisi
+          dolore.</p>
+        <button id="btn1">saiba mais</button>
+      </div>
+      <div class="about_column">
+        <img src="https://img.freepik.com/free-photo/chef-making-ok-sign-white-background_1368-2804.jpg?w=2000" alt="">
+      </div>
+    </div>
+  </div>
+  <div id="order">
+    <h1 class="title1">Order</h1>
+    <form action="">
+      <input type="text" class="inp_box" placeholder="Nome">
+      <input type="email" class="inp_box" placeholder="Email">
+      <textarea type="text" class="inp_box text_area" placeholder="Pedido"></textarea>
+      <button class="btn2">Pedir Agora</button>
+    </form>
+  </div>
+
+
+</div>
+<footer>
+  <div>
+    &copy;copyright 2023
+    <p>
+      Designed by João Gimaque
+    </p>
+  </div>
+</footer>
+
